@@ -1,0 +1,76 @@
+body {
+  min-width: 1000px;
+}
+
+h1, h2, #displayExerciseNumber, p {
+  text-align: center;
+  font-family: Helvetica;
+}
+
+#title {
+  margin-top: 40px;
+}
+
+#stage {
+  display:flex;
+  justify-content: center;
+  height:80vh;
+  min-height: 500px;
+  min-width: 1000px;
+}
+
+#stageTwo {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  min-height: 500px;
+  text-align: center;
+  min-width: 1000px;
+
+}
+
+#drumPad {
+  height: 200px;
+  width: 200px;
+  border-radius: 600px;
+  background-color: brown;
+  box-shadow: 0 4px 0 #444;
+}
+
+#centerer {
+  display: flex;
+  justify-content: center;
+}
+
+.stick {
+  position: absolute;
+  height: 200px;
+  top: 300px;
+  width: auto;
+}
+
+#pattern {
+  margin-bottom: 20px;
+  border-top: 1px solid lightgrey;
+  border-bottom: 1px solid lightgrey;
+}
+
+#pattern span {
+  font-family: Helvetica;
+  font-size: 50px;
+}
+
+#successes {
+  margin-top: 20px;
+  font-family: Helvetica;
+  font-size: 25px;
+  color: white;
+}
+
+#displayExerciseNumber {
+  margin-top: 0;
+}
+
+#rules {
+  margin-top: 100px;
+}
