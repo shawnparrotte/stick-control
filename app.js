@@ -25,7 +25,9 @@ var pageOne = {
   24: ["R", "R", "L", "L", "R", "L", "R", "R", "L", "L", "R", "R", "L", "R", "L", "L"],
   exerciseNumber: 1,
   strokeNumber: 0,
-  successes: 0
+  successes: 0,
+  timestart: 0,
+  timetotal: 0
 }
 
 function init(){
@@ -64,6 +66,11 @@ function strokeFail(){
 
 $(window).keydown(function(e){
 
+  if(pageOne.timestart === 0){
+    var d = new Date;
+    pageOne.timestart = d.getTime();
+  }
+
   if(e.keyCode === 74){
     $("#stickR").css("transform", "rotate(-10deg)");
     if(pageOne[pageOne.exerciseNumber][pageOne.strokeNumber] === "R"){
@@ -92,7 +99,22 @@ $(window).keydown(function(e){
     if(pageOne.successes === 4){
       pageOne.exerciseNumber++;
       if(pageOne.exerciseNumber === 25){
+
         pageOne.exerciseNumber = 1;
+
+        var t = new Date;
+        pageOne.timetotal = (t - pageOne.timestart)/60000;
+        console.log(pageOne.timetotal)
+
+        var m = Math.floor(pageOne.timetotal)
+            s = (pageOne.timetotal - m) * 60;
+            s = s.toFixed(0);
+
+        console.log(m, s);
+        alert("Awesome Job! You finished in " + m + " minutes and " + s + " seconds!");
+
+        pageOne.timestart = 0;
+        pageOne.timetotal = 0;
       }
       loadExercise(pageOne[pageOne.exerciseNumber]);
       pageOne.successes = 0;
