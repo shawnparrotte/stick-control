@@ -28,7 +28,7 @@ var pageOne = {
   successes: 0
 }
 
-function init(test){
+function init(){
   var sL = ($(window).width() / 2) - $("#stickL").width() - 20,
       sR = ($(window).width() / 2) + 20,
       sT = ($(window).height() / 2);
@@ -105,7 +105,7 @@ $(window).keydown(function(e){
   else if (e.keyCode === 70) {$("#stickL").css("transform", "rotate(0deg)");}
 });
 
-$(document).ready(function(e){init(e);loadExercise(pageOne[pageOne.exerciseNumber]);});
-$(window).resize(function(e){
-    init(e);
+$(document).ready(function(){init();loadExercise(pageOne[pageOne.exerciseNumber]);});
+$(window).resize(function(){
+    init();
 });
