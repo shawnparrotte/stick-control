@@ -34,11 +34,11 @@ function init(test){
       sT = ($(window).height() / 2);
 
   if($(window).width() < 999){
-    $("#stickL").css("left", "287.5px");
     $("#stickR").css("left", "525.5px");
+    $("#stickL").css("left", "287.5px");
   } else {
-    $("#stickL").css("left", sL);
     $("#stickR").css("left", sR);
+    $("#stickL").css("left", sL);
   }
 }
 
