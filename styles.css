@@ -74,3 +74,13 @@ h1, h2, #displayExerciseNumber, p {
 #rules {
   margin-top: 100px;
 }
+
+#fade {
+  position: absolute;
+  height: 100000px;
+  width: 10000px;
+  top: 0;
+  left: 0;
+  z-index: 10000;
+  background-color: white;
+}

@@ -131,7 +131,9 @@ $(document).ready(function(){
   setTimeout(function(){
     init();
     loadExercise(pageOne[pageOne.exerciseNumber]);
-  }, 500)
+    $("#fade").fadeOut("slow");
+  }, 250);
+
 
 });
 $(window).resize(function(){
