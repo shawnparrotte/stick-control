@@ -127,7 +127,13 @@ $(window).keydown(function(e){
   else if (e.keyCode === 70) {$("#stickL").css("transform", "rotate(0deg)");}
 });
 
-$(document).ready(function(){init();loadExercise(pageOne[pageOne.exerciseNumber]);});
+$(document).ready(function(){
+  setTimeout(function(){
+    init();
+    loadExercise(pageOne[pageOne.exerciseNumber]);
+  }, 1000)
+
+});
 $(window).resize(function(){
     init();
 });
