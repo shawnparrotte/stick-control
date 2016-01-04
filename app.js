@@ -131,7 +131,7 @@ $(document).ready(function(){
   setTimeout(function(){
     init();
     loadExercise(pageOne[pageOne.exerciseNumber]);
-  }, 1000)
+  }, 500)
 
 });
 $(window).resize(function(){
